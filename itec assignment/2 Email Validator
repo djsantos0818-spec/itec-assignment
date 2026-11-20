@@ -1,0 +1,14 @@
+
+email = input("Enter your email: ")
+
+if email.count("@") == 1 and " " not in email:
+    username, domain = email.split("@")
+
+    if username and "." in domain and not domain.startswith(".") and not domain.endswith("."):
+        print("Valid email address")
+        print("Username:", username)
+        print("Domain:", domain)
+    else:
+        print("Invalid email address")
+else:
+    print("Invalid email address")

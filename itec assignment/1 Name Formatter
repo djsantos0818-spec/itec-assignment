@@ -1,0 +1,15 @@
+
+full_name = input("Enter your full name: ")
+
+name = full_name.strip().title().split()
+
+first_name = name[0]
+last_name = name[-1]
+
+formatted_name = " ".join(name)
+last_first = last_name + ", " + " ".join(name[:-1])
+initials = "".join(word[0] + "." for word in name)
+
+print("Title Case:", formatted_name)
+print("Last, First:", last_first)
+print("Initials:", initials)
